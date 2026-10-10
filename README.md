@@ -46,3 +46,10 @@ Proyek ini merupakan aplikasi sederhana berbasis PHP yang mengimplementasikan al
 - feature/hierarki-kelas : ambil algoritma tree (fio)
 - feature/riwayat-pemesanan : ambil algoritma Arraylist dan Stack (naura)
 - feature/rute-perjalanan: ambil algoritma Graph (poppy)
+
+- v1.1.0 = Sorting -> feature/sorting_jadwal
+- v1.2.0 = Queue -> featur/antrean_pemesanan
+- v1.3.0 = ArrayList & Stack -> feature/riwayat_pemesanan
+- v1.4.0 = Searching -> feature/searching_jadwal
+- v1.5.0 = Tree -> feature/hierarki_kelas
+- v1.6.0 = Graph -> feature/rute_perjalanan
