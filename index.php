@@ -18,6 +18,7 @@ require_once __DIR__ . '/src/Algorithms/Sorting.php';
 require_once __DIR__ . '/src/Algorithms/Searching.php';
 require_once __DIR__ . '/src/Services/Dataset.php';
 require_once __DIR__ . '/src/Services/Profiler.php';
+require_once __DIR__ . '/src/DataStructures/Tree.php';
 
 // Inisialisasi State di Session jika pertama kali dibuka
 if (!isset($_SESSION['booking_queue'])) {
@@ -555,8 +556,34 @@ $tab = $_GET['tab'] ?? 'jadwal';
         <footer>
             <p>&copy; 2026 Tugas Kuliah Struktur Data & Algoritma - Sistem Pemesanan Tiket Kereta Api (PHP Native)</p>
         </footer>
+</div> 
+
+    <div style="background: #fff; padding: 20px; margin-top: 20px; border-radius: 8px;">
+        <h3>Visualisasi Struktur Tree Kereta Api</h3>
+        <?php
+        $sampleData = [
+            'id' => 'ROOT_01',
+            'name' => 'KA Argo Wilis',
+            'type' => 'ROOT',
+            'children' => [
+                [
+                    'id' => 'KLS_01',
+                    'name' => 'Eksekutif',
+                    'type' => 'KELAS',
+                    'children' => [
+                        ['id' => 'GBG_01', 'name' => 'Gerbong 1 (K1)', 'type' => 'GERBONG'],
+                        ['id' => 'GBG_02', 'name' => 'Gerbong 2 (K1)', 'type' => 'GERBONG']
+                    ]
+                ]
+            ]
+        ];
+
+        $tree = Tree::buildFromArray($sampleData);
+        echo "<pre style='background: #f4f4f4; padding: 15px; border-radius: 5px; text-align: left;'>";
+        echo htmlspecialchars($tree->renderHierarchy());
+        echo "</pre>";
+        ?>
     </div>
 
 </body>
-
 </html>
