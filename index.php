@@ -19,6 +19,7 @@ require_once __DIR__ . '/src/Algorithms/Searching.php';
 require_once __DIR__ . '/src/Services/Dataset.php';
 require_once __DIR__ . '/src/Services/Profiler.php';
 require_once __DIR__ . '/src/DataStructures/Tree.php';
+require_once __DIR__ . '/src/DataStructures/Graph.php';
 
 // Inisialisasi State di Session jika pertama kali dibuka
 if (!isset($_SESSION['booking_queue'])) {
@@ -563,7 +564,7 @@ $tab = $_GET['tab'] ?? 'jadwal';
         <?php
         $sampleData = [
             'id' => 'ROOT_01',
-            'name' => 'KA Argo Wilis',
+            'name' => 'KA Argo Bromo Anggrek',
             'type' => 'ROOT',
             'children' => [
                 [
@@ -584,6 +585,37 @@ $tab = $_GET['tab'] ?? 'jadwal';
         echo "</pre>";
         ?>
     </div>
+   
+<!-- Blok Visualisasi Graph -->
+    <div style="background: #fff; padding: 20px; margin-top: 20px; border-radius: 8px; color: #000;">
+        <h3>Visualisasi Struktur Graph (Rute Stasiun & Dijkstra)</h3>
+        <?php
+        $graph = new Graph();
+        
+        // Menambahkan rute dan jarak antar stasiun (Edge)
+        $graph->addEdge('GMR', 'JNG', 5);
+        $graph->addEdge('JNG', 'BD', 140);
+        $graph->addEdge('GMR', 'BKS', 25);
+        $graph->addEdge('BKS', 'BD', 160);
 
-</body>
+        echo "<pre style='background: #f4f4f4; padding: 15px; border-radius: 5px; text-align: left;'>";
+        
+        // 1. Menampilkan hasil BFS dari Stasiun GMR
+        echo "Traversal BFS dari Stasiun GMR:\n";
+        echo implode(' -> ', $graph->bfs('GMR')) . "\n\n";
+
+        // 2. Menampilkan hasil rute terpendek Dijkstra dari GMR ke BD
+        $hasilDijkstra = $graph->dijkstra('GMR', 'BD');
+        if ($hasilDijkstra['found']) {
+            echo "Rute Terpendek (Dijkstra) dari GMR ke BD:\n";
+            echo "Jalur : " . implode(' -> ', $hasilDijkstra['path']) . "\n";
+            echo "Jarak : " . $hasilDijkstra['distance'] . " km\n";
+        } else {
+            echo "Rute tidak ditemukan.\n";
+        }
+
+        echo "</pre>";
+        ?>
+    </div>
+<body>
 </html>
