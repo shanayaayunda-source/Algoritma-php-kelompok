@@ -38,11 +38,11 @@ Proyek ini merupakan aplikasi sederhana berbasis PHP yang mengimplementasikan al
 
 ## Status Proyek
 
-Tahap awal pengembangan.
-Branch :
-	- feature/searching-jadwal : ambil algoritma searching (alisa)
-	- feature/sorting-jadwal : ambil algoritma sorting (salwa)
-	- feature/antrean-pemesanan : ambil algoritma queue (maudy)
-	- feature/hierarki-kelas : ambil algoritma tree (fio)
-	- feature/riwayat-pemesanan : ambil algoritma Arraylist dan Stack (naura)
-	- feature/rute-perjalanan: ambil algoritma Graph (poppy)
+# Tahap awal pengembangan.
+# Branch :
+- feature/searching-jadwal : ambil algoritma searching (alisa)
+- feature/sorting-jadwal : ambil algoritma sorting (salwa)
+- feature/antrean-pemesanan : ambil algoritma queue (maudy)
+- feature/hierarki-kelas : ambil algoritma tree (fio)
+- feature/riwayat-pemesanan : ambil algoritma Arraylist dan Stack (naura)
+- feature/rute-perjalanan: ambil algoritma Graph (poppy)
