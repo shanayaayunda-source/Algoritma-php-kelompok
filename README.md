@@ -47,6 +47,7 @@ Proyek ini merupakan aplikasi sederhana berbasis PHP yang mengimplementasikan al
 - feature/riwayat-pemesanan : ambil algoritma Arraylist dan Stack (naura)
 - feature/rute-perjalanan: ambil algoritma Graph (poppy)
 
+# Pembagian Version
 - v1.1.0 = Sorting -> feature/sorting_jadwal
 - v1.2.0 = Queue -> featur/antrean_pemesanan
 - v1.3.0 = ArrayList & Stack -> feature/riwayat_pemesanan
