@@ -21,7 +21,7 @@ require_once __DIR__ . '/src/DataStructures/Tree.php';
 require_once __DIR__ . '/src/Algorithms/Sorting.php';
 require_once __DIR__ . '/src/Algorithms/Searching.php';
 require_once __DIR__ . '/src/Services/Dataset.php';
-
+require_once __DIR__ . '/src/Services/Profiler.php';
 
 // Inisialisasi State di Session jika pertama kali dibuka
 if (!isset($_SESSION['booking_queue'])) {
