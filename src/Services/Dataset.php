@@ -41,7 +41,7 @@ class Dataset {
             new Kereta('KA-109', 'Malabar',            'BD',  'ML',  '17:20', '06:38', 420000, 20),
             new Kereta('KA-110', 'Jayabaya',           'SBI', 'ML',  '04:15', '06:28', 90000,  80),
             new Kereta('KA-111', 'Sembrani',           'GMR', 'SBI', '19:00', '04:15', 590000, 15),
-            new Kereta('KA-112', 'Matarmaja',          'GMR', 'ML',  '10:45', '03:10', 250000, 10),
+           // new Kereta('KA-112', 'Matarmaja',          'GMR', 'ML',  '10:45', '03:10', 250000, 10),
         ];
     }
 
