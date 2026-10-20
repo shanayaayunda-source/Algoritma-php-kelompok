@@ -713,29 +713,7 @@ $tab = $_GET['tab'] ?? 'jadwal';
             </form>
 
             <!-- KPI Dashboard APM Cards -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 15px 0;">
-                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
-                    <span style="font-size: 11px; color: #64748b; font-weight: bold; text-transform: uppercase;">Peak RAM Usage</span>
-                    <h3 style="margin: 4px 0 0 0; color: #0284c7;"><?= $systemPeakRamKb ?> KB</h3>
-                    <small style="color: #64748b;">System Heap Peak</small>
-                </div>
-                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
-                    <span style="font-size: 11px; color: #64748b; font-weight: bold; text-transform: uppercase;">Real Allocated RAM</span>
-                    <h3 style="margin: 4px 0 0 0; color: #0f766e;"><?= $systemRealRamKb ?> KB</h3>
-                    <small style="color: #64748b;">Current Active Heap</small>
-                </div>
-                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
-                    <span style="font-size: 11px; color: #64748b; font-weight: bold; text-transform: uppercase;">Cache Hit Rate</span>
-                    <h3 style="margin: 4px 0 0 0; color: #16a34a;"><?= $cachingBenchmark['cache_stats']['hit_rate_pct'] ?></h3>
-                    <small style="color: #64748b;"><?= $cachingBenchmark['cache_stats']['hits'] ?> Hits / <?= $cachingBenchmark['cache_stats']['total_requests'] ?> Requests</small>
-                </div>
-                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px;">
-                    <span style="font-size: 11px; color: #64748b; font-weight: bold; text-transform: uppercase;">APM Health Status</span>
-                    <h3 style="margin: 4px 0 0 0; color: #16a34a;">HEALTHY</h3>
-                    <small style="color: #16a34a;">Semua threshold < 2.0 ms</small>
-                </div>
-            </div>
-
+            
             <h3>1. Komparasi Algoritma Pengurutan (Sorting)</h3>
             <p>Dataset: <strong><?= $actualDatasetCount ?> Jadwal Kereta Api</strong> | Jumlah Iterasi Pengujian: <strong><?= $iterationsSort ?>x</strong> | Rasio Percepatan Quick Sort: <strong style="color: #16a34a;"><?= $sortBenchmark['speedup'] ?></strong></p>
             <table>
